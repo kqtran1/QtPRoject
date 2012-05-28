@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{17231B06-0345-40C2-8CB1-2E7BF563BAFC}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>qmake &amp; nmake</NMakeBuildCommandLine>
+    <NMakeOutput>Debug\QtProject.exe</NMakeOutput>
+    <NMakeReBuildCommandLine>qmake -project &amp; qmake &amp; nmake</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <ExecutablePath>C:\dev\poco-1.4.3p1\bin;$(QTDIR)\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>C:\dev\QuantLib-1.2;C:\dev\poco-1.4.3p1\Util\include;C:\dev\poco-1.4.3p1\Net\include;C:\dev\poco-1.4.3p1\Foundation\include;C:\dev\boost_1_49_0;$(QTDIR)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\dev\QuantLib-1.2\lib;C:\dev\QuantLib-1.2\build\vc100\Win32\Release;C:\dev\poco-1.4.3p1\lib;$(QTDIR)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>qmake &amp; nmake release</NMakeBuildCommandLine>
+    <NMakeOutput>Release\QtProject.exe</NMakeOutput>
+    <NMakeReBuildCommandLine>qmake -project &amp; qmake &amp; nmake</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <ExecutablePath>C:\dev\poco-1.4.3p1\bin;$(QTDIR)\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>C:\dev\QuantLib-1.2\ql;C:\dev\poco-1.4.3p1\Util\include;C:\dev\poco-1.4.3p1\Net\include;C:\dev\poco-1.4.3p1\Foundation\include;C:\dev\boost_1_49_0;$(QTDIR)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\dev\QuantLib-1.2\lib;C:\dev\poco-1.4.3p1\lib;$(QTDIR)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="BondComputationResultForm.ui" />
+    <None Include="BondForm.ui" />
+    <None Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BondForm.h" />
+    <ClInclude Include="BondTableModel.h" />
+    <ClInclude Include="BondView.h" />
+    <ClInclude Include="CanvasWidget.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="mvp\Presenter.h" />
+    <ClInclude Include="mvp\View.h" />
+    <ClInclude Include="MyApplication.h" />
+    <ClInclude Include="MyApplicationPresenter.h" />
+    <ClInclude Include="MyCanvasPresenter.h" />
+    <ClInclude Include="MyCanvasView.h" />
+    <ClInclude Include="services\BondPricerService.h" />
+    <ClInclude Include="StatusBarPresenter.h" />
+    <ClInclude Include="StatusBarView.h" />
+    <ClInclude Include="utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BondForm.cpp" />
+    <ClCompile Include="BondTableModel.cpp" />
+    <ClCompile Include="BondView.cpp" />
+    <ClCompile Include="CanvasWidget.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MyApplication.cpp" />
+    <ClCompile Include="MyApplicationPresenter.cpp" />
+    <ClCompile Include="MyCanvasPresenter.cpp" />
+    <ClCompile Include="MyCanvasView.cpp" />
+    <ClCompile Include="services\BondPricerService.cpp" />
+    <ClCompile Include="StatusBarPresenter.cpp" />
+    <ClCompile Include="StatusBarView.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
