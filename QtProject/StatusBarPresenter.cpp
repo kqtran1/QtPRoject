@@ -1,6 +1,8 @@
 #include "StatusBarPresenter.h"
 
 #include <Poco/NObserver.h>
+#include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -20,6 +22,7 @@ StatusBarPresenter::~StatusBarPresenter()
 void StatusBarPresenter::handle(const Poco::AutoPtr<AddBondNotification> & notification)
 {
 	ostringstream stringBuilder;
-	stringBuilder << "Add New Bond Data: " << notification->bondData().couponRate << endl; 
+	stringBuilder << "Add New Bond Data: ";
+	stringBuilder << notification->bondData().couponRate;
 	view()->showMessage(stringBuilder.str());
 }

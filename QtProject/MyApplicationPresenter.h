@@ -2,7 +2,6 @@
 #define	MYAPPLICATIONPRESENTER_H
 
 #include "BondView.h"
-#include "services/BondPricerService.h"
 #include "utils.h"
 
 #include "mvp/Presenter.h"
@@ -15,8 +14,7 @@ class MyApplicationPresenter : public Presenter<BondView> {
     Q_OBJECT
 public:
     MyApplicationPresenter(BondViewPtr view, 
-            Poco::NotificationCenter & notificationCenter,
-            BondPricerService & bondPricerService);
+            Poco::NotificationCenter & notificationCenter);
     
     virtual ~MyApplicationPresenter();
 
@@ -24,9 +22,6 @@ public:
 
 public slots:
     void logNothing();
-
-private:
-    BondPricerService & bondPricerService;
 };
 
 #endif

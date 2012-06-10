@@ -5,8 +5,6 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace QuantLib;
-
 BondCalculationTask::BondCalculationTask(const BondDataList & bondDataList, const std::string& name): 
         Task(name),
         data(bondDataList) {

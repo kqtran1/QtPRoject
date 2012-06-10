@@ -17,9 +17,9 @@ QVariant BondTableModel::data(const QModelIndex &index, int role) const {
     if (role == Qt::DisplayRole) {
         int column = index.column();
         if (column == 0) {
-            return QString::fromStdString(dateToString(bondData.issueDate));
+            return bondData.issueDate.toString("dd-MM-yyyy");
         } else if (column == 1) {
-            return QString::fromStdString(dateToString(bondData.maturity));
+            return bondData.maturity.toString("dd-MM-yyyy");
         } else if (column == 2) {
             return QVariant(bondData.couponRate);
         } else if (column == 3) {
@@ -27,12 +27,6 @@ QVariant BondTableModel::data(const QModelIndex &index, int role) const {
         }
     }
     return QVariant();
-}
-
-std::string BondTableModel::dateToString(QuantLib::Date d) const {
-    std::stringstream stream;
-    stream << d.dayOfMonth() << "-" << d.month() << "-" << d.year();
-    return stream.str();
 }
 
 void BondTableModel::addBondData(const BondData & bondData) {

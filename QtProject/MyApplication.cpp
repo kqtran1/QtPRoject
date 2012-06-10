@@ -11,6 +11,7 @@
 #include "BondTableModel.h"
 #include "StatusBarView.h"
 #include "StatusBarPresenter.h"
+#include "ToolBarView.h"
 
 #include <QtGui/QApplication>
 #include <QtGui/QGridLayout>
@@ -22,6 +23,8 @@
 #include <QtGui/QMenuBar>
 #include <QtGui/QToolBar>
 #include <QtGui/QStatusBar>
+#include <QtGui/QIcon>
+#include <QtGui/QAction>
 
 #include <boost/shared_ptr.hpp>
 #include <Poco/NotificationCenter.h>
@@ -45,10 +48,8 @@ int MyApplication::run(int argc, char *argv[]) {
 
     QMainWindow mainWindow;
 
-    BondPricerService bondPricerService;
-
     BondViewPtr view(new BondView());
-    MyApplicationPresenter presenter(view, notificationCenter, bondPricerService);
+    MyApplicationPresenter presenter(view, notificationCenter);
     QDockWidget * bondDataDockWidget = new QDockWidget("Bond Data");
     bondDataDockWidget->setWidget(view->container());
     mainWindow.addDockWidget(Qt::LeftDockWidgetArea, bondDataDockWidget);
@@ -67,13 +68,12 @@ int MyApplication::run(int argc, char *argv[]) {
     canvasDockWidget2->setWidget(canvasView2->container());
     mainWindow.setCentralWidget(canvasDockWidget2);
 
-	StatusBarViewwPtr statusBar(new StatusBarView());
-	StatusBarPresenter statusBarPresenter(statusBar, notificationCenter);
-	mainWindow.setStatusBar(statusBar->statusBarWidget());
+    StatusBarViewPtr statusBar(new StatusBarView());
+    StatusBarPresenter statusBarPresenter(statusBar, notificationCenter);
+    mainWindow.setStatusBar(statusBar->statusBarWidget());
 
-	QToolBar * toolBar = new QToolBar();
-	toolBar->addAction(QString::fromStdString("Test"));
-	mainWindow.addToolBar(toolBar);
+    ToolBarViewPtr toolBar(new ToolBarView());
+    mainWindow.addToolBar(toolBar->toolBarWidget());
 
     mainWindow.show();
 

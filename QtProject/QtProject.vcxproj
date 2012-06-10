@@ -39,8 +39,10 @@
     <NMakeReBuildCommandLine>qmake -project &amp; qmake &amp; nmake</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <ExecutablePath>C:\dev\poco-1.4.3p1\bin;$(QTDIR)\bin;$(ExecutablePath)</ExecutablePath>
-    <IncludePath>C:\dev\QuantLib-1.2;C:\dev\poco-1.4.3p1\Util\include;C:\dev\poco-1.4.3p1\Net\include;C:\dev\poco-1.4.3p1\Foundation\include;C:\dev\boost_1_49_0;$(QTDIR)\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\dev\QuantLib-1.2\lib;C:\dev\QuantLib-1.2\build\vc100\Win32\Release;C:\dev\poco-1.4.3p1\lib;$(QTDIR)\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\dev\poco-1.4.3p1\Util\include;C:\dev\poco-1.4.3p1\Net\include;C:\dev\poco-1.4.3p1\Foundation\include;C:\dev\boost_1_49_0;$(QTDIR)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\dev\poco-1.4.3p1\lib;$(QTDIR)\lib;$(LibraryPath)</LibraryPath>
+    <AdditionalOptions>
+    </AdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeBuildCommandLine>qmake &amp; nmake release</NMakeBuildCommandLine>
@@ -56,6 +58,7 @@
   <ItemGroup>
     <None Include="BondComputationResultForm.ui" />
     <None Include="BondForm.ui" />
+    <None Include="openFile.png" />
     <None Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +76,7 @@
     <ClInclude Include="services\BondPricerService.h" />
     <ClInclude Include="StatusBarPresenter.h" />
     <ClInclude Include="StatusBarView.h" />
+    <ClInclude Include="ToolBarView.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
@@ -85,9 +89,9 @@
     <ClCompile Include="MyApplicationPresenter.cpp" />
     <ClCompile Include="MyCanvasPresenter.cpp" />
     <ClCompile Include="MyCanvasView.cpp" />
-    <ClCompile Include="services\BondPricerService.cpp" />
     <ClCompile Include="StatusBarPresenter.cpp" />
     <ClCompile Include="StatusBarView.cpp" />
+    <ClCompile Include="ToolBarView.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

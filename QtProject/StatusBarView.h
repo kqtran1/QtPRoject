@@ -1,8 +1,10 @@
+#ifndef STATUSBARVIEW_H
+#define	STATUSBARVIEW_H
+
 #include "mvp/View.h"
 
 #include <QtGui/QStatusBar>
-#ifndef STATUSBARVIEW_H
-#define	STATUSBARVIEW_H
+
 
 #include <boost/shared_ptr.hpp>
 #include <string>
@@ -22,7 +24,7 @@ private:
 	QStatusBar * statusBar;
 };
 
-typedef boost::shared_ptr<StatusBarView> StatusBarViewwPtr;
+typedef boost::shared_ptr<StatusBarView> StatusBarViewPtr;
 
 #endif
 

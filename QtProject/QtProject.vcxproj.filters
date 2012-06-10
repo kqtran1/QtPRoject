@@ -22,6 +22,9 @@
     <Filter Include="Source Files\services">
       <UniqueIdentifier>{b87d94f0-2a22-4f74-be47-1743c1d847aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\icons">
+      <UniqueIdentifier>{abd0e6f5-017e-45c3-8e04-4e9b3595e96f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.txt" />
@@ -30,6 +33,9 @@
     </None>
     <None Include="BondComputationResultForm.ui">
       <Filter>Resource Files</Filter>
+    </None>
+    <None Include="openFile.png">
+      <Filter>Resource Files\icons</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +84,9 @@
     <ClInclude Include="StatusBarPresenter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ToolBarView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyCanvasView.cpp">
@@ -107,13 +116,13 @@
     <ClCompile Include="MyCanvasPresenter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="services\BondPricerService.cpp">
-      <Filter>Source Files\services</Filter>
-    </ClCompile>
     <ClCompile Include="StatusBarView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="StatusBarPresenter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolBarView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
