@@ -19,9 +19,6 @@
     <Filter Include="Header Files\services">
       <UniqueIdentifier>{df2e8cee-e6b3-4a8e-8a33-742e92917032}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\services">
-      <UniqueIdentifier>{b87d94f0-2a22-4f74-be47-1743c1d847aa}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource Files\icons">
       <UniqueIdentifier>{abd0e6f5-017e-45c3-8e04-4e9b3595e96f}</UniqueIdentifier>
     </Filter>
@@ -90,9 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyCanvasView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BondForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BondTableModel.cpp">

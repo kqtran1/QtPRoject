@@ -5,11 +5,7 @@
 
 #include "mvp/View.h"
 
-#include <QtGui/QWidget>
-#include <QtGui/QGridLayout>
-#include <QtGui/QLineEdit>
-#include <QtGui/QLabel>
-#include <QtGui/QMainWindow>
+#include <QtGui>
 
 #include <boost/shared_ptr.hpp>
 

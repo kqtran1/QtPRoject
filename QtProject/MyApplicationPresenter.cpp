@@ -5,7 +5,7 @@
 #include <boost/lexical_cast.hpp>
 #include <boost/bind.hpp>
 
-#include <QtCore/QObject>
+#include <QtCore>
 
 MyApplicationPresenter::MyApplicationPresenter(boost::shared_ptr<BondView> view,
         Poco::NotificationCenter & notificationCenter) :

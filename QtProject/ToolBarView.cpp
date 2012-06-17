@@ -1,7 +1,6 @@
 #include "ToolBarView.h"
 
-#include <QtGui/QAction>
-#include <QtGui/QIcon>
+#include <QtGui>
 
 ToolBarView::ToolBarView():
 toolBar(new QToolBar())

@@ -2,7 +2,7 @@
 #include "MyApplication.h"
 #include "utils.h"
 
-#include <QtGui/QLabel>
+#include <QtGui>
 
 BondView::BondView() :
         bondForm(new BondForm()) {

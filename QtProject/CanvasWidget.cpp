@@ -1,7 +1,6 @@
 #include "CanvasWidget.h"
 #include "utils.h"
-
-#include <QtGui/QPainter>
+#include <QtGui>
 
 CanvasWidget::CanvasWidget(): text("Default") {
     Logger::logConstructor("CanvasWidget");

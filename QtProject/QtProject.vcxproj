@@ -80,7 +80,6 @@
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BondForm.cpp" />
     <ClCompile Include="BondTableModel.cpp" />
     <ClCompile Include="BondView.cpp" />
     <ClCompile Include="CanvasWidget.cpp" />

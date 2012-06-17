@@ -1,6 +1,8 @@
 #include "BondTableModel.h"
 
-BondTableModel::BondTableModel(QObject *parent) : QAbstractTableModel(parent), bondDatas() {
+BondTableModel::BondTableModel(QObject *parent) : 
+    QAbstractTableModel(parent), 
+    bondDatas() {
 }
 
 int BondTableModel::rowCount(const QModelIndex & parent) const {

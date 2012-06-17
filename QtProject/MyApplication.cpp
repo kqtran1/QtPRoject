@@ -13,18 +13,7 @@
 #include "StatusBarPresenter.h"
 #include "ToolBarView.h"
 
-#include <QtGui/QApplication>
-#include <QtGui/QGridLayout>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-
-#include <QtGui/QDockWidget>
-#include <QtGui/QMainWindow>
-#include <QtGui/QMenuBar>
-#include <QtGui/QToolBar>
-#include <QtGui/QStatusBar>
-#include <QtGui/QIcon>
-#include <QtGui/QAction>
+#include <QtGui>
 
 #include <boost/shared_ptr.hpp>
 #include <Poco/NotificationCenter.h>

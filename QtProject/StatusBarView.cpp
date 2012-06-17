@@ -1,6 +1,6 @@
 #include "StatusBarView.h"
 
-#include <QtCore/QString>
+#include <QtCore>
 
 StatusBarView::StatusBarView() : statusBar(new QStatusBar())
 {

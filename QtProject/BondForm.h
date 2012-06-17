@@ -6,8 +6,9 @@
 class BondForm : public QWidget {
     Q_OBJECT
 public:
-    BondForm();
-    virtual ~BondForm();
+    BondForm()  {
+        widget.setupUi(this);
+    }
     
     Ui::BondForm widget;
 };
